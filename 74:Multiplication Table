@@ -1,0 +1,18 @@
+line_number=[1,2,3,4,5,6,7,8,9,10] #행 리스트
+row_number=[1,2,3,4,5,6,7,8,9,10] #열 리스트
+
+
+print("   ",end='') #형식 맞추기
+
+
+
+for i in line_number: # 1 2 3 4 5 6 7 8 9 출력
+    print("{:2d} ".format(i), end='')
+
+for j in range(len(row_number)): #열 길이 만큼 도는 j
+    print("\n",end='')
+    print("{:2d} ".format(row_number[j]),end='')
+    for i in range(len(row_number)): #열 길이 만큼 도는 i
+        print("{:2d} ".format(line_number[j]*row_number[i]),end='')
+
+print("\n")
