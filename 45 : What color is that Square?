@@ -1,0 +1,15 @@
+array = [[0 for col in range(8)] for row in range(8)]
+for y in range(8):
+    for x in range(8):
+        if ( x + y == 1 or x + y ==3 or x+y ==5 or x+y==7 or x+y==9 or x+y==11 or x+y==13):
+            array[y][x] =1
+
+flag =0
+alphabet = input()
+number = int(input())
+if (ord(alphabet) - 97 + number ) % 2 == 1 :
+    flag =1
+if flag == 0:
+    print('흰색입니다.')
+else:
+    print('검정색입니다.')
