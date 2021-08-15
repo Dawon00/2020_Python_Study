@@ -1,0 +1,16 @@
+wl = int(input('wavelength를 입력하세요: '))
+
+if 380 <= wl < 450:
+    print('Violet')
+elif 450 <= wl <495:
+    print('Blue')
+elif 495 <= wl <570:
+    print('Green')
+elif 570 <= wl <590:
+    print('Yellow')
+elif 590 <= wl <620:
+    print('Orange')
+elif 620 <= wl :
+    print('Red')
+else:
+    print('다시 입력하세요')
