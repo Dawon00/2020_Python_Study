@@ -1,0 +1,12 @@
+c=int(input('가장 긴 변의 길이 입력:'))
+a=int(input('첫 번째 변의 길이 입력:'))
+b=int(input('두 번째 변의 길이 입력:'))
+
+if c>=a+b:
+    print('삼각형이 아니다')
+elif a==b==c:
+    print('정삼각형')
+elif a==b or a==c or b==c:
+    print('이등변 삼각형')
+else:
+    print('부등변 삼각형')
