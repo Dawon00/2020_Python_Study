@@ -1,0 +1,63 @@
+#129번
+#두개의 6면 주사위를 1000번 굴리는 프로그램
+#매개변수 없음
+#expected percent는 고정
+#simulated percent는 매번 바뀜
+
+import random
+
+
+dice_1List=[]
+for i in range(1000):
+    dice_1List.append(random.randint(1,6))
+
+dice_2List=[]
+for i in range(1000):
+    dice_2List.append(random.randint(1,6))
+
+dice=[]
+for i in range(1000):
+    dice.append(dice_1List[i]+dice_2List[i])
+
+expected = {2:2.78, 3:5.56, 4:8.33, 5:11.11, 6:13.89, 7:16.67, 8:13.89, 9:11.11, 10:8.33, 11:5.56, 12:2.78}
+
+count_2,count_3,count_4,count_5,count_6,count_7,count_8,count_9,count_10,count_11,count_12=0,0,0,0,0,0,0,0,0,0,0
+
+for i in range(1000):
+    if dice[i] == 2:
+        count_2 +=1
+    elif dice[i] == 3:
+        count_3 +=1
+    elif dice[i] == 4:
+        count_4 +=1
+    elif dice[i] == 5:
+        count_5 +=1
+    elif dice[i] == 6:
+        count_6 +=1
+    elif dice[i] == 7:
+        count_7 +=1
+    elif dice[i] == 8:
+        count_8 +=1
+    elif dice[i] == 9:
+        count_9 +=1
+    elif dice[i] == 10:
+        count_10 +=1
+    elif dice[i] == 11:
+        count_11 +=1
+    elif dice[i] == 12:
+        count_12 +=1
+    
+
+print('ToTal      Simulated Percent       Expected Percent')
+
+print('2\t\t',      count_2/10,'\t\t\t',      expected.get(2))
+print('3\t\t',      count_3/10,'\t\t\t',      expected.get(3))
+print('4\t\t',      count_4/10,'\t\t\t',      expected.get(4))
+print('5\t\t',      count_5/10,'\t\t\t',      expected.get(5))
+print('6\t\t',      count_6/10,'\t\t\t',      expected.get(6))
+print('7\t\t',      count_7/10,'\t\t\t',      expected.get(7))
+print('8\t\t',      count_8/10,'\t\t\t',      expected.get(8))
+print('9\t\t',      count_9/10,'\t\t\t',      expected.get(9))
+print('10\t\t',      count_10/10,'\t\t\t',      expected.get(10))
+print('11\t\t',      count_11/10,'\t\t\t',      expected.get(11))
+print('12\t\t',      count_12/10,'\t\t\t',      expected.get(12))
