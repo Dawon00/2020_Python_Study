@@ -1,0 +1,35 @@
+#117번
+#집합은 각각 x좌표와 y좌표를 갖는다
+#공식이용해서 문제풀기
+#import numpy안하고 평균같은거 직접 구했음
+
+
+row = int(input('몇개의 점을 입력하실건가요?: '))
+list=[[0 for col in range(2)] for row in range(row)] #2중리스트를 만들어줌
+
+for i in range(row):
+    list[i][0] = float(input('x좌표 입력: '))
+    list[i][1] = float(input('y좌표 입력: '))
+
+x_sum,y_sum,x_average,y_average,xy_sum,x2_sum=0,0,0,0,0,0  
+
+for j in range(row):
+    x_sum += list[j][0] #x의 총합
+    x_average= (x_sum / row) #x의 평균
+
+for j in range(row):
+    y_sum += list[j][1] #y의 총합
+    y_average= (y_sum / row) #y의 평균
+
+for j in range(row):
+    xy_sum += (list[j][0]*list[j][1]) #xy를 다 더한것
+
+for j in range(row): 
+    x2_sum += list[j][0]**2 #x제곱을 다 더한것
+
+m = ((xy_sum-((x_sum * y_sum)/row))/((x2_sum)-(x_sum**2)/row))
+#round(m,2) -> 반올림할때 이렇게는 안되나요?
+b = y_average - (m * x_average)
+
+print("y = {0:.2f}x + {1:.1f}".format(m, b)) #m은 소수 둘째짜리까지
+                                             #n은 소수 첫째자리까지 반올림하게함
