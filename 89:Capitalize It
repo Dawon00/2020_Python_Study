@@ -1,0 +1,15 @@
+def _Capitzlize_it(message):
+  new_message = message # copy
+  new_message[0] = message[0].upper() #첫글자를 대문자화
+
+  for index in range(len(message)-2):
+    # Capitzlize 'i'
+    if message[index] == 'i' and message[index-1] == ' ': #글자가 i고 그 앞이 빈칸이라면
+      new_message[index] = message[index].upper() #대문자화 한다
+    # Capitalize first alpha
+    if (message[index] == '.' or '!' or'?') and (message[index+2] == ' ') : #특수기호 나오고 그 뒤로 빈칸이있다면
+      new_message[index+2] = message[index+2].upper()
+  return "".join(new_message)
+
+message = list(input("Typing... ")) # input
+print(_Capitzlize_it(message))  # output
