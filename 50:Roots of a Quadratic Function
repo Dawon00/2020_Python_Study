@@ -1,0 +1,17 @@
+import math
+
+a = int(input("0이 아닌 상수 a값을 입력하세요: "))
+b = int(input("상수 b값을 입력하세요: "))
+c = int(input("상수 c값을 입력하세요: "))
+
+D = b**2 -4*a*c
+root=( -b + abs(math.sqrt(float(b**2-4*a*c)))) / (2*a)
+
+if D<0:
+    print("The quadratic equation does not have any real roots")
+elif D==0:
+    print("The equation has one real root.")
+    print(root)
+else:
+    print("The equation has two real roots.")
+    print(root)
