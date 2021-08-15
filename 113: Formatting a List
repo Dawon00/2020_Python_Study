@@ -1,0 +1,16 @@
+#113번
+#여러항목을 입력받고 
+#요소의 개수는 알아서
+#﻿apples, oranges, bananas and lemons 만 출력하는 경우(apple apple and orange 이런거 빼고)
+list =[]
+
+while True:
+    s = input('단어를 입력하세요(빈칸 입력시 종료): ')
+    list.append(s)
+    if s == "":
+        del(list[-1])
+        break
+for i in range(0,(len(list)-2)):
+    print(list[i]+', ',end='')
+
+print(list[-2],'and', list[-1])
