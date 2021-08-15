@@ -1,0 +1,10 @@
+word = input('문자를 입력하세요. ')
+isPalindrome = True #변수 True로 지정
+for i in (0, len(word) -1): #(단어의 길이-1)만큼 i반복
+    if word[i] != word[len(word)-i-1]: #word를 거꾸로 뒤집은 리스트랑 다를경우
+        print("Palindrome 이 아닙니다.") #회문이 아닙니다
+        isPalindrome = False #변수를 False로 바꾸기
+        break #반복문 빠져나오기
+
+if isPalindrome: #만약 회문이 맞으면(True값이면)
+    print("Palindrome 이 맞습니다.") #회문이 맞다고 출력
