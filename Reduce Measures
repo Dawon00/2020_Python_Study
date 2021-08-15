@@ -1,0 +1,26 @@
+#첫번째 매개변수 양
+#두번째 매개변수 측정단위(cup, tablespoon, teaspoon) >> 위의 숫자에 대한 단위
+#가장 큰 단위를 사용하여 측정값을 나타내는 문자열을 반환
+#예) 59티스푼 = 1cup , 3tablespoon, 2teaspoon
+#1cup=16tablespoon, 1tablespoon=2teaspoon
+
+def result(volume,unit):
+    total = 0
+    if unit == 'cup' :
+        total = volume * 32
+    elif unit == 'tablespoon':
+        total = volume * 16
+    elif unit == 'teaspoon':
+        total = volume
+
+    cup = int(total / 32)
+    total = total % 32
+    tablespoon = int(total / 16)
+    total = total % 16
+    teaspoon = total
+
+    print('cup: ',cup, 'tablespoon: ',tablespoon, 'teaspoon: ',teaspoon)
+    
+volume = int(input('양 입력: '))
+unit = input('cup, tablespoon, teaspoon 중 입력: ')
+result(volume, unit)
