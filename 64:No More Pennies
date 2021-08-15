@@ -1,0 +1,19 @@
+#(페니가 센트보다 단위가 더 작은거네) 가장 가까운 니켈로 반올림한대. 
+#5로 나눴을 때 2.5이하면 반올림 ㄴㄴ
+
+import math #math를 import
+total_price=0
+while True:
+    price=(input("총 금액을 입력해주세요(페니 단위): "))
+    if price!="": #무언갈 입력하면
+        total_price+=float(price) #가격을 총합에 더한다
+    else: #아무것도 입력하지 않았다면
+        break #while문을 빠져나간다
+penny=total_price/5 #총합을 5로 나눈게 penny
+if penny<2.5: #penny가 2.5미만이면
+    penny=math.floor(penny) #penny를 내림해서 penny에 다시 넣는다.
+else: #2.5미만이 아니라면
+    penny=round(penny) #penny를 반올림한 것을 penny에 넣는다.
+print("카드로 계산할 경우 지불해야할 금액은 {}센트 입니다.".format(total_price))
+print("변환된 금액은 {}니켈이므로, 현금으로 계산할 경우 {}센트를 더 지불해야합니다.".format(penny,(total_price-(penny)*5)))
+```
