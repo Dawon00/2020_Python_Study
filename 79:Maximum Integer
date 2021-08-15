@@ -1,0 +1,16 @@
+import random
+num=[]
+for i in range(100):
+    num.append(random.randrange(1,101))
+max=num[0] #num리스트의 [0]값을 max로 설정
+n=0
+for j in num:
+    if j<=max: #j가 max이하라면
+        print(j)
+    else:
+        max=j 
+        print("{}<== Update".format(max))
+        n+=1
+
+print("The maximum value found was {}".format(max))
+print("The maximum value was updated {} times".format(n))
