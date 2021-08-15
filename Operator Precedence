@@ -1,0 +1,14 @@
+#precedence라는 함수는 우선순위를 나타내는 정수를 반환
+#+와 -의 경우 1, *와 /의 경우 2, 새 창에서 열린 이미지의 경우 3을 반환
+#이러한 연산자 중 하나가 아닌 경우 함수는 -1을 반환해야 한다
+def precedence(op):
+	if (op=='+') or (op=='-'):
+		print(1)
+	elif (op=='*') or (op=='/'):
+		print(2)
+	elif (op =='Open image in new window'):
+		print(3)
+	else:
+		print(-1)
+op = input('operator 입력(+,-,*,/,Open image in new window 중): ')
+precedence(op)
