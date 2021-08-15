@@ -1,0 +1,16 @@
+#첫 번째 매개변수 문자열
+#두 번째 매개변수 width
+#함수는 original 문자열과 correct number로 구성된 new 문자열을 반환
+#original 문자열이 제공된 width의 중앙에 나타나야 한다.
+#5일때는 문자열의 양쪽에 2개의 공백을 두었다.
+def center(string, width):
+	if width % 2 == 0:
+		half =int(width // 2)
+	else:
+		half =int((width - 1) // 2)
+	print((" ")*(half-1),string) #오른쪽은 공백 넣어도 안보여서 생략
+
+string = input('문자열을 입력하세요: ')
+width = int(input('width를 입력하세요: '))
+
+print(center(string, width))
