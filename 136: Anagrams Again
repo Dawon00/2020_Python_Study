@@ -1,0 +1,14 @@
+#136번
+#anagram은 구성 문자는 똑같은데 순서만 다른 단어
+import re
+a = input('첫번째 문자열: ').upper()
+b = input('두번째 문자열: ').upper()
+
+a = re.sub('[., ]','',a) #'.' 랑 ',' 랑 ' '은 지우기
+b = re.sub('[., ]','',b)
+print(a)
+print(b)
+def anagram(a,b):
+    return sorted(a)==sorted(b)
+
+print(anagram(a,b))
