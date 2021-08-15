@@ -1,0 +1,8 @@
+for i in range(1, 6): #1에서 5까지 i
+    original = (i * 5) - 0.05 #원래 가격
+    discount = original * 0.6 #할인한 가격
+    new = original * 0.4 #새로운 가격
+    original = str(round(original, 2)) +'$' #소수점 2자리 까지 반올림을 위해 round()사용
+    discount = str(round(discount, 2)) +'$'
+    new = str(round(new, 2)) +'$'
+    print(original, discount, new)
