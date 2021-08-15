@@ -1,0 +1,10 @@
+#135번
+#anagram은 구성 문자는 똑같은데 순서만 다른 단어
+
+a = input('첫번째 문자열: ')
+b = input('두번째 문자열: ')
+
+def anagram(a,b):
+    return sorted(a)==sorted(b)
+
+print(anagram(a,b))
