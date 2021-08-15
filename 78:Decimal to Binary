@@ -1,0 +1,13 @@
+q = input('십진수를 입력하세요. ')
+result = list("")
+if q.isdigit(): #q가 숫자라면
+    q = int(q) #정수로 만들고
+    while 1:
+        r = q%2 # q를 2로 나눈게 r
+        result.insert(0, str(r)) #r을 문자열로 바꾸고 result의 맨 앞자리에 삽입
+        q = q//2 #q를 2로 나누어 다시 q에 대입
+        if q == 0: #q가 0이 되면
+            break # 루프문을 빠져나옴
+    print(''.join(result))
+else:
+    print("십진수를 입력해주세요.")
