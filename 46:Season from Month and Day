@@ -1,0 +1,23 @@
+month = input("달을 입력하세요: ")
+day = int(input("날을 입력하세요: "))
+
+if month == 'March':
+    if day == 20:
+        print("Spring")
+    else :
+         print("다시 입력해주세요.")
+elif month == 'June':
+    if day == 21:
+        print("Summer")
+    else :
+         print("다시 입력해주세요.")
+elif month == 'September':
+    if day == 22:
+        print("Fall")
+    else :
+         print("다시 입력해주세요.")    
+elif month == 'December':
+    if day == 21:
+        print("Winter")
+    else :
+         print("다시 입력해주세요.")  
