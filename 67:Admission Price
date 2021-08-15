@@ -1,0 +1,17 @@
+total_fee=0
+while True:
+    how_old=input("투숙객의 연령을 입력해주세요(더 이상 없을 시 공백으로 남겨주세요): ")
+    if how_old!="":#공백이라면
+        how_old=int(how_old)
+        if how_old<=2:
+            total_fee+=0
+        elif 3<=how_old<=12:
+            total_fee+=14
+        elif how_old>=65:
+            total_fee+=18
+        else:
+            total_fee+=23
+    else: #공백이라면
+        break #루프문을 빠져나온다
+print("입장료의 총 비용은 {:.2f}달러입니다.".format(total_fee)) #소수 둘째자리까지 나타내기
+```
