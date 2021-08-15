@@ -1,0 +1,24 @@
+#일수를 입력(1~12)하면 노래가사를 출력하는 함수 lyrics
+#1을 입력했을 땐 1일 노래가사출력
+#2을 입력했을 땐 2일 노래가사 출력 후 And 1일 노래가사
+#3을 입력했을 땐 3일, 2일 노래가사 출력후 And 1일 노래가사
+#....이런식으로
+#따로 입력받는것 없이 전체 노래 가사를 출력하면 되는것...?
+
+def  lyrics(day):
+	
+	list= [[1,'first','A partridge in a pear tree.'],[2,'second','Two turtle doves,'],[3,'third','Three French hens,'],[4,'fourth','Four calling birds,'],[5,'fifth','Five golden rings,'],[6,'sixth','Six geese a-laying,'],[7,'seventh','Seven swans a-swimming,'],[8,'eighth','Eight maids a-milking,'],[9,'ninth','Nine ladies dancing,'],[10,'tenth','Ten lords a-leaping,'],[11,'eleventh','Eleven pipers piping,'],[12,'twelfth','Twelve drummers drumming,']]
+	
+	if day == 1:
+		print("On the", list[0][1],  "day of Christmas,\n my true love sent to me:")
+		print(list[0][2])
+	elif day > 1:
+		print("On the", list[day-1][1], "day of Christmas,\nmy true love sent to me:")
+		for i in range (day, 1, -1):
+			print(list[i-1][2])
+		print("And", list[0][2])
+
+
+
+for j in range(1,13):
+	print(lyrics(j),"\n")
