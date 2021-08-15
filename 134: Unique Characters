@@ -1,0 +1,8 @@
+#134번
+#문자열의 문자 종류?
+
+import re
+code = input('문자열을 입력하세요: ')
+#code = re.sub('[ ]','',code) -> 빈칸 지울거면
+list = set(code)
+print(len(list))
