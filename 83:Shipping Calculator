@@ -1,0 +1,14 @@
+def charge(number):
+	if number == 0:
+		result = 0
+	elif number < 0:
+		result= '자연수를 입력하세요'
+	elif number == 1:
+		result = 10.95
+	elif number > 1:
+		result = 10.95 + (2.95 * (number-1))
+	return result
+
+number = int(input('품목의 개수: '))
+print('배송료는 $', charge(number))
+​
