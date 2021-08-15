@@ -1,0 +1,29 @@
+#112번 
+#빈줄이 입력되면 숫자입력은 종료
+#입력한 수들의 평균값, 그 아래값들, 평균값(같은게 있다면), 평균 위 값들을 출력
+#invalid literal for int() with base 10: '' 오류. int 대체 무엇으로?
+
+list = []
+while True:
+    n = input('수를 입력하세요(빈줄 입력시 종료): ')
+    list.append(n)
+    
+    if n == '':
+        del list[-1]
+        break
+    list = [int(i) for i in list]
+sum = 0
+for i in list:
+    sum += i
+average = sum / len(list)
+
+for j in range(len(list)):
+    if list[j] > average:
+        print('above average values: ')
+        print(list[j])
+    elif list[j] == average:
+        print('average values: ')
+        print(list[j])
+    else :
+        print('below average values: ')
+        print(list[j])
