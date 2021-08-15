@@ -1,0 +1,10 @@
+def median(x,y,z):
+	list = [x,y,z]
+	list.sort()
+	result = list[1]
+	return result
+
+x = int(input('첫번째 수: '))
+y = int(input('두번째 수: '))
+z = int(input('세번째 수: '))
+print('중앙값은', median(x,y,z))
