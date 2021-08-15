@@ -1,0 +1,18 @@
+month = input("달을 입력하세요: ")
+day = int(input("날을 입력하세요: "))
+
+if month == 'January':
+    if day == 1:
+        print("New year's day")
+    else :
+         print("해당하는 휴일이 없습니다.")
+elif month == 'July':
+    if day == 1:
+        print("Canada day")
+    else :
+         print("해당하는 휴일이 없습니다.")
+elif month == 'December':
+    if day == 25:
+        print("Christmas day")
+    else :
+         print("해당하는 휴일이 없습니다.")   
