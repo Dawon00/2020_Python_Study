@@ -1,0 +1,13 @@
+count = 0
+total = 0
+while 1:
+    num = int(input("숫자를 입력해주세요. 0을 입력시 평균을 계산합니다. "))
+    if num == 0: #0을 입력
+        if count == 0:#아직 count가 0인 경우
+            print("첫 번째 값을 0으로 입력할 수는 없습니다.")
+        else: #첫번째 횟수가 아니라면
+            print("평균 :", total/count)
+            break
+    else:#0이 아닌 정수를 입력한다면
+        count += 1 #횟수에 +1을 하고
+        total += num #숫자를 total에 더한다.
