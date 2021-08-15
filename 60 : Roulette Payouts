@@ -1,0 +1,24 @@
+import random
+num = random.randrange(0,38) #0~37 중 랜덤으로 하나선택
+if num == 0: #만약 0이면
+    print("The spin resulted in 0 ...\\n")
+    print("Pay 0") #0출력
+elif num == 37: #37이면
+    print("The spin resulted in 00 ...\\n")
+    print("Pay 00") #00을 출력
+else: #1~36사이의 정수라면
+    print("The spin resulted in", num, "...\\n")
+    print("Pay", num,"\\n") #그 수 자체 출력하고
+    red = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36] #빨간색 리스트
+    if num in red:
+        print("Pay Red\\n")
+    else:#빨간색이 아니라면 검정색이라고 출력
+        print("Pay Black\\n")
+    if num % 2 == 0:#짝수라면
+        print("Pay Even\\n")#짝수라고 출력
+    else:#아니라면
+        print("Pay Odd\\n")#홀수라고 출력
+    if num < 19:#19미만일때
+        print("Pay 1 to 18\\n")#1~18사이의 수라고 출력
+    else:19이상의 수라면
+        print("Pay 19 to 36\\n")#19~36사이의 수라고 출력
