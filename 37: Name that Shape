@@ -1,0 +1,20 @@
+sides = int(input("면의 개수를 입력하세요: "))
+
+if sides == 3:
+    print("삼각형")
+elif sides == 4:
+    print("사각형")
+elif sides == 5:
+    print("오각형")
+elif sides == 6:
+    print("육각형")
+elif sides == 7:
+    print("칠각형")
+elif sides == 8:
+    print("팔각형")
+elif sides == 9:
+    print("구각형")
+elif sides == 10:
+    print("십각형")
+else:
+    print("범위를 벗어나는 숫자 입니다.")
