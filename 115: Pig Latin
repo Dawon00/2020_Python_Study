@@ -1,0 +1,29 @@
+#115번
+#자음(y를 포함)으로 시작하면 첫번째 모음까지의 모든 글자를 맨뒤로 옮김
+#그다음 ay를 덧붙임
+#모음으로 시작하면 끝에 way를 붙임
+#입력하는 문자열에는 소문자와 공백만 포함된다고 가정
+
+def pig_latin(word):
+    word = word.strip().lower()
+    const_tail = 'ay'
+    vow_tail = 'way'
+    pig_latin =''
+    vowel = ['a','e','i','o','u']
+    for i in range(len(word)):
+        if word[0] in vowel:
+            pig_latin+=word+vow_tail
+            break
+        else:
+            if word[i] in vowel:
+                pig_latin+=word[i:]+word[0:i]+const_tail
+                break
+    return pig_latin
+
+def main():
+    word = str(input('단어를 입력하세요: '))
+    print('pig latin번역은',pig_latin(word))
+
+
+if __name__ == "__main__":
+    main()
