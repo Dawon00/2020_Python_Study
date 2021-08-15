@@ -1,0 +1,33 @@
+#구형 번호판 :글자3개 숫자3개
+#신형 번호판 :숫자4개 글자3개
+#구형과 신형은 반반 확률로 나타남
+
+def plates():
+	import string
+	import random
+
+	old_or_new = random.randrange(0,2) #0이나 1 둘중하나
+
+	if old_or_new == 0: #0일때 구형 번호판
+		print('구형 번호판 입니다.')
+		string_pool = string.ascii_uppercase
+		result=""
+		for i in range(3):
+			result += random.choice(string_pool)
+		string_pool2 = string.digits
+		for j in range(3):
+			result += random.choice(string_pool2)
+		print(result)
+	else: #1일때 신형 번호판
+		print('신형 번호판 입니다.')
+		result=""
+		string_pool = string.digits
+		for i in range(4):
+			result += random.choice(string_pool)
+		string_pool2 = string.ascii_uppercase
+		for j in range(3):
+			result += random.choice(string_pool2)
+		print(result)
+
+
+print(plates())
