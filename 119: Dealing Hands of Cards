@@ -1,0 +1,45 @@
+#119번
+#셔플함수를 여러번 작동해서, import random하지않고 제대로 섞인 카드를 
+#위에서부터 차례대로 나눠주면 좀 더 그럴듯 할 것같아요
+#손의 개수, 각 손에 줄 카드의 수, a deck of cards가 변수
+# return a list containing all of the hands
+#118번 코드사용, 카드 섞고 5장의 카드를 4개의 손에 나눠주기(예시)
+#deck에 남아있는 카드도 마지막에 표시
+import random
+
+def createDeck() :
+    one = ['2','3','4','5','6','7','8','9','T','J','Q','K','A']
+    two = ['s','h','d','c']
+    
+    card = [x + y for x in one for y in two]
+      
+    return card
+
+card = createDeck()
+print('처음 카드목록: ',card)
+
+def shuffle():#카드 셔플하는 함수
+    n = 52
+    start = 0
+    while n:
+        for _ in range(round(n/2)): #_는 어떤 특정값을 무시하기 위한 용도로 쓰이기도함
+            card.append(card.pop(start))
+        n = round(n/2)
+        start = start + (n-round(n/2))
+    return card
+
+print('\n한번 셔플한 카드목록 :',shuffle())
+
+number_hand = int(input('손이 몇개?: '))
+number_card = int(input('각각 카드 몇개씩?: '))
+all_hand=[[0 for col in range(number_card)] for row in range(number_hand)]
+   #손 마다의 카드를 저장할 2중리스트 만들기
+
+for i in range(number_hand):
+    all_hand[i]=random.sample(card, number_card) #i번째 손에 number_card만큼의 카드 주기
+    print(i+1,'번째 사람의 카드는',end='')
+    print(all_hand[i])
+    card = list(set(card)-set(all_hand[i])) #차집합으로 남은카드고려(이땐 set)
+                                            #list로 다시 바꿔주기
+             
+print('남은 카드는', card)
