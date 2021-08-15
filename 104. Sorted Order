@@ -1,0 +1,19 @@
+#104번
+#0을 입력하면 정수입력을 종료
+#오름차순으로 리스트를 정렬해야한다
+#각 줄에 하나씩 값이 표시되어야한다.
+
+list = [] #리스트 생성
+
+while True: #정수를 계속 입력받는 loop문
+
+    a = int(input('정수를 입력하세요: '))
+    list.append(a) 
+
+    if a == 0:
+        del list[-1] #입력했던 0은 지워줌
+        break #loop문을 빠져나옴
+list.sort() #작은값에서 큰 값 순서로 정렬
+
+for i in range(len(list)): #리스트의 모든 요소들을 한줄씩 출력
+    print(list[i])
