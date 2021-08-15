@@ -1,0 +1,8 @@
+def hypo(a,b):
+    result = (((a**2)+(b**2))**0.5)
+    return result
+
+a = int(input('첫번째 변의길이: '))
+b = int(input('두번째 변의길이: '))
+
+print (hypo(a,b))
