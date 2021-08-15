@@ -1,0 +1,14 @@
+#128번
+#reverselookup의 기능을 보여주는 프로그램
+#여러개의 키, 하나의 키, 키가 없을때 모두 고려
+#key -> value 찾기?
+#여러개의 키는 무슨 의미지
+
+dic = {'0':'a' , '1':'b', '2':'c', '3':'d'}
+
+dic_reverse = {v:k for k,v in dic.items()} #딕셔너리의 key와 value를 뒤집어 저장해놓고 찾기
+value = input('value를 입력하세요: ')
+if value not in dic_reverse:
+    print('존재하지 않는 value')
+else:
+    print('key는',dic_reverse.get(value))
