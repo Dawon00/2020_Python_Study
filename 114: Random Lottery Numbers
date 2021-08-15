@@ -1,0 +1,10 @@
+#114번
+#1~49사이의 수들중 6개의 번호를 무작위로 뽑고(중복없이) 오름차순으로 출력
+import random
+list = []
+for i in range(1,50):
+    list.append(i)
+
+my_number = random.sample(list, 6)
+my_number.sort()
+print (my_number)
