@@ -1,0 +1,19 @@
+#print를 return으로 수정함으로써 해결!
+def nextPrime(number):
+	number += 1
+	while True:
+		if number!= 1:
+			for i in range(2,number):
+				if number % i ==0:
+					number += 1
+					
+				else:
+
+					return number
+					break
+		elif number == 1:
+			number += 1
+			
+	
+number = int(input('자연수를 입력하세요: '))
+print('이 숫자보다 큰 다음 소수는', nextPrime(number))
