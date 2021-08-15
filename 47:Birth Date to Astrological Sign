@@ -1,0 +1,28 @@
+month = int(input("달을 입력하세요(ex:5,12): "))
+day = int(input("일을 입력하세요(ex:5,12): "))
+
+if (month == 12 and 22 <= day <= 31) or (month == 1 and 1 <= day <= 19):
+    print("염소자리")
+elif (month == 1 and 20 <= day <= 31) or (month == 2 and 1 <= day <= 18):
+    print("물병자리")
+elif (month == 2 and 19 <= day <= 30) or (month == 3 and 1 <= day <= 20):
+    print("물고기자리")
+elif (month == 3 and 21 <= day <= 31) or (month == 4 and 1 <= day <= 19):
+    print("양자리")
+elif (month == 4 and 20 <= day <= 30) or (month == 5 and 1 <= day <= 20):
+    print("황소자리")
+elif (month == 5 and 21 <= day <= 31) or (month == 6 and 1 <= day <= 20):
+    print("쌍둥이자리")
+elif (month == 6 and 21 <= day <= 30) or (month == 7 and 1 <= day <= 22):
+    print("게자리")
+elif (month == 7 and 23 <= day <= 31) or (month == 8 and 1 <= day <= 22):
+    print("사자자리")
+elif (month == 8 and 23 <= day <= 31) or (month == 9 and 1 <= day <= 22):
+    print("처녀자리")
+elif (month == 9 and 23 <= day <= 30) or (month == 10 and 1 <= day <= 22):
+    print("천칭자리")
+elif (month == 10 and 23 <= day <= 31) or (month == 11 and 1 <= day <= 21):
+    print("전갈자리")
+elif (month == 11 and 22 <= day <= 30) or (month == 12 and 1 <= day <= 21):
+    print("궁수자리")
+        
