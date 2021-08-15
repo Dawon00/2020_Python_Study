@@ -1,0 +1,40 @@
+#125번
+#isSublist라는 함수생성. 두개의 목록을 매개변수로.
+
+list = []
+smaller_list = []
+while True:
+    n = input('더 큰 리스트의 수를 입력하세요(빈줄 입력시 종료): ')
+    list.append(n)
+    
+    if n == '':
+        del list[-1]
+        break
+    list = [int(i) for i in list]
+
+
+def sub_lists(list):
+    sublist=[]
+    for i in range(len(list) + 1):
+        for j in range(i + 1, len(list) + 1):
+            sub = list[i:j]
+            sublist.append(sub)
+    sublist.insert(0, []) #빈리스트는 맨앞에 따로 추가해줌
+    return sublist
+
+while True:
+    j = input('더 작은 리스트의 수를 입력하세요(빈줄 입력시 종료): ' )
+    smaller_list.append(j)
+
+    if j == '':
+        del smaller_list[-1]
+        break
+    smaller_list = [int(i) for i in smaller_list]
+
+def check(list, smaller_list):
+    if (smaller_list in sub_lists(list)):
+        print('작은 리스트가 큰 리스트에 속해있음')
+    else:
+        print('작은 리스트가 큰 리스트에 속해있지않음')
+​
+
