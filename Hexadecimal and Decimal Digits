@@ -1,0 +1,14 @@
+#16진수 : 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+#hex2int : 0~15사이의 정수를 16진수로 변환하는 함수
+#int2hex : 16진수를 기본 정수로 변환하는 함수
+
+def hex2int(num):
+	return hex(num)
+
+def int2hex(s):
+	return int(s,16)
+
+num = int(input('숫자를 입력하세요: '))
+print(hex2int(num))
+s = input('문자열을 입력하세요: ')
+print(int2hex(s))
