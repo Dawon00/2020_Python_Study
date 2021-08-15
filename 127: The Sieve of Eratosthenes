@@ -1,0 +1,16 @@
+#127번
+#소수 구하기
+
+n=int(input('수를 입력하세요: '))
+
+def isPrime(a):
+  if(a<2):
+    return False
+  for i in range(2,a):
+    if(a%i==0):
+      return False
+  return True
+
+for i in range(n+1):
+  if(isPrime(i)):
+    print(i)
