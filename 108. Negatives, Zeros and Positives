@@ -1,0 +1,14 @@
+#108번
+#빈 줄이 입력되면 종료
+#음수,0,양수 모두 고려하여 작은 수부터 큰 수까지 나열
+
+list = []
+while True:
+    n = input('정수를 입력하세요(빈칸을 입력하면 종료): ')
+    list.append(n)
+
+    if n == ' ':
+        del list[-1]
+        break
+list.sort()
+print(list)
