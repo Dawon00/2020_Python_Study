@@ -1,0 +1,16 @@
+fr = float(input('Frequency range(Hz)를 입력하세요: '))
+
+if fr < 3* (10**9):
+    print('Radio waves')
+elif 3*(10**9) <= fr <3*(10**12):
+    print('Microwaves')
+elif 3*(10**12) <= fr <4.3*(10**14):
+    print('Infrared light')
+elif 4.3*(10**14) <= fr <7.5*(10**14):
+    print('Visible light')
+elif 7.5*(10**14) <= fr <3*(10**17):
+    print('Ultraviolet light')
+elif 3*(10**17) <= fr <3*(10**19):
+    print('X-Rays')
+elif 3*(10**19) <= fr :
+    print('Gamma rays')  
