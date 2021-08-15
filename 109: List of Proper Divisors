@@ -1,0 +1,9 @@
+#109번
+#숫자 입력하면 output 약수
+
+n = int(input('양의 정수를 입력하세요: '))
+
+for i in range(1, n+1):
+    if n % i == 0:
+        print(i,' ')
+print()
