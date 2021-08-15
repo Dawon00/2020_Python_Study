@@ -1,0 +1,22 @@
+#121번
+#countRange라는 함수는 최소값보다 크거나 같고 최대값보다 작은 목록내의 요소수 반환
+#함수의 매개변수는 목록, 최소값, 최대값
+
+list=[]
+while True:
+    n = input('숫자를 입력하세요(빈칸입력시종료): ')
+    if n=='':
+        break
+    else:
+        list.append(n)
+    list = [int(i) for i in list]
+a=min(list)
+b=max(list)
+
+def countRange(list, a, b):
+    count=0
+    for i in range(len(list)):
+        if i >= a and i < b:
+            count += 1
+    print ('최소값보다 크거나 같고 최대값보다 작은 값의 개수는',count)
+countRange(list,a,b)
