@@ -1,0 +1,30 @@
+#분자와 분모를 입력
+#약분 하는 함수를 만들기
+
+def fraction(number):
+    print("%d / %d" %(number[0],number[1]))
+
+def gcd(a, b): #최대공약수 계산
+  while (b != 0):
+    temp = a % b
+    a = b
+    b = temp
+  return abs(a)
+
+def reduce(son, mom):
+  frac = [ son, mom ]
+
+  if (frac[1] == 0): # 분모가 0일 경우에 에러
+    frac[0] = 0
+    frac[1] = 0
+    return frac
+
+  gcd_result = gcd(frac[0], frac[1])
+
+  frac[0] = frac[0] / gcd_result
+  frac[1] = frac[1] / gcd_result
+
+  return frac
+x = int(input('분자입력: '))
+y = int(input('분모입력: '))
+print(fraction(reduce(x,y)))
