@@ -1,0 +1,53 @@
+#Note To Frequency
+
+Frequency = { 'C4' : 261.63, 'D4' : 293.66, 'E4' : 329.63, 'F4' : 349.23, 'G4' : 392.00, 'A4' : 440.00, 'B4'
+               : 493.88 }
+freq_user = input()
+note =freq_user[0]
+octave = int(freq_user[1])
+
+if note == 'C':
+    freq = Frequency['C4']
+elif note == 'D':
+    freq == Frequency['D4']
+elif note == 'E':
+    freq == Frequency['E4']
+elif note == 'F':
+    freq == Frequency['F4']
+elif note == 'G':
+    freq == Frequency['G4']
+elif note == 'A':
+    freq == Frequency['A4']
+elif note == 'B':
+    freq == Frequency['B4']
+
+freq = freq / 2 ** (4 - octave )
+print('A frequency of %c is %f.' %(note, freq))
+
+#Note To Frequency -2
+
+Frequency = { 'C4' : 261.63, 'D4' : 293.66, 'E4' : 329.63, 'F4' : 349.23, 'G4' : 392.00, 'A4' : 440.00, 'B4'
+               : 493.88 }
+freq_user = float(input())
+
+if freq_user >= Frequency['C4'] -1 and freq_user <= Frequency['C4' +1:
+    note = 'C4'
+elif freq_user >= Frequency['D4'] -1 and freq_user <= Frequency['D4' +1:
+    note = 'D4'
+elif freq_user >= Frequency['E4'] -1 and freq_user <= Frequency['E4' +1:
+    note = 'E4'
+elif freq_user >= Frequency['F4'] -1 and freq_user <= Frequency['F4' +1:
+    note = 'F4'
+elif freq_user >= Frequency['G4'] -1 and freq_user <= Frequency['G4' +1:
+    note = 'G4'
+elif freq_user >= Frequency['A4'] -1 and freq_user <= Frequency['A4' +1:
+    note = 'A4'
+elif freq_user >= Frequency['B4'] -1 and freq_user <= Frequency['B4' +1:
+    note = 'B4'                                                                
+else:
+    note = ""
+
+if note =="":
+        print('ERROR')
+else:
+        print("Frequency is", note)
