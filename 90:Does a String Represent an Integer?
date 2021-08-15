@@ -1,0 +1,13 @@
+#문자열의 문자가 유효한 정수를 나타내는지 여부를 결정하는 Integer 함수 작성
+#선행 후행 공백 무시해야함
+#첫 번째 문자가 +나 -
+def Integer(num):
+    fact=False
+    if num[0]in ["+","-"]:
+        fact=True
+        return fact
+    else:
+        return fact
+int_num=input("정수를 입력해주세요: ")
+print("{}는 정수입니까?".format(int_num))
+print("===>> {}".format(Integer(int_num)))
