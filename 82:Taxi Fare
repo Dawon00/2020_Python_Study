@@ -1,0 +1,7 @@
+def fare(x):
+	base = 4
+	plus = 0.25
+	return (base+(plus*(distance*1000)))
+
+distance = int(input('주행거리: '))
+print('총요금은 $', fare(distance))
