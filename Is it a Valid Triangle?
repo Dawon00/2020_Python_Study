@@ -1,0 +1,24 @@
+#3개의 매개변수를 입력하고 삼각형을 형성할 수 있는지 판단하는 함수
+#3개의 변중에서 제일 긴 변을 확인하기위해 max()를 사용
+def determine(a,b,c):
+	if max(a,b,c) == a:
+		if a<b+c:
+			print('삼각형 형성가능')
+		else:
+			print('삼각형 형성불가능')
+	elif max(a,b,c) == b:
+		if b<a+c:
+			print('삼각형 형성가능')
+		else:
+			print('삼각형 형성불가능')
+	else:
+		if c<a+b:
+			print('삼각형 형성가능')
+		else:
+			print('삼각형 형성불가능')
+
+a = int(input('첫번째 변의 길이: '))
+b = int(input('두번째 변의 길이: '))
+c = int(input('세번째 변의 길이: '))
+
+determine(a,b,c)
