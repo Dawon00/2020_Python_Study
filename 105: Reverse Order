@@ -1,0 +1,20 @@
+#105번
+#정수를 읽어 리스트에 저장
+#0을 입력하면 입력을 종료하도록한다.
+#모든 값을 읽은 후에는 값이 역순으로 출력되어야한다
+#각 줄에 하나의 값이 표시되어야 한다.
+
+list = []
+
+while True:
+    a = int(input('정수를 입력하세요: '))
+    list.append(a)
+
+    if a == 0:
+        del list[-1]
+        break
+list.sort(reverse=True)
+
+for i in range(len(list)):
+    print(list[i])
+​
