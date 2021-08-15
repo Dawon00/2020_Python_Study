@@ -1,0 +1,14 @@
+#111번
+#함수는 문자열을 유일한 매개변수로 한다
+#, . ? ! ' " / 를 제거해야한다
+#단어 중간의 '는 제거하지 마시오.
+#﻿"Examples", "of","contractions","include","don’t","isn’t","and","wouldn’t"
+import re
+def function(string):
+    
+    
+    string = re.sub('''[?!.:;,"/]''', '', string)
+    list_string = string.split( )
+    print(list_string)
+string = input('문자열을 입력하세요: ')
+function(string)
