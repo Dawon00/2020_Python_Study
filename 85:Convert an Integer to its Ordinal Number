@@ -1,0 +1,35 @@
+#서수를 반환하는 함수 ordinal
+#범위 밖의 값을 입력하면 빈 문자열 반환
+def ordinal (x):
+
+	if x == 1:
+		result = 'first'
+	elif x == 2:
+		result = 'second'
+	elif x == 3:
+		result = 'third'
+	elif x == 4:
+		result = 'fourth'
+	elif x == 5:
+		result = 'fifth'
+	elif x == 6:
+		result = 'sixth'
+	elif x == 7:
+		result = 'seventh'
+	elif x == 8:
+		result = 'eighth'
+	elif x == 9:
+		result = 'ninth'
+	elif x == 10:
+		result = 'tenth'
+	elif x == 11:
+		result = 'eleventh'
+	elif x == 12:
+		result = 'twelfth'
+	else:
+		result = ' '
+	return result
+
+x = int(input('1~12사이의 자연수 입력: '))
+
+print('서수는', ordinal(x))
