@@ -1,0 +1,16 @@
+#110번
+#1~10000사이의 완벽한 숫자를 모두 출력
+
+def perfect(n):
+    sum = 0
+    for i in range (1,n):
+        if n % i == 0:
+            sum += i
+    if (sum == n):
+        return True
+    else:
+        return False
+
+for i in range(1,10001):
+    if perfect(i) == True:
+        print(i)
