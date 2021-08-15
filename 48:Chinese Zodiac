@@ -1,0 +1,26 @@
+year = int(input("년도를 입력하세요: "))
+
+if year % 12 == 8:
+    print("용")
+elif year % 12 == 9:
+    print("뱀")
+elif year % 12 == 10:
+    print("말")
+elif year % 12 == 11:
+    print("양")
+elif year % 12 == 0:
+    print("원숭이")
+elif year % 12 == 1:
+    print("닭")
+elif year % 12 == 2:
+    print("개")
+elif year % 12 == 3:
+    print("돼지")
+elif year % 12 == 4:
+    print("쥐")
+elif year % 12 == 5:
+    print("소")
+elif year % 12 == 6:
+    print("호랑이")
+elif year % 12 == 7:
+    print("토끼")    
